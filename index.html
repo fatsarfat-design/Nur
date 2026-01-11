@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Nur: Духовный Путь</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Public+Sans:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#96A388", 
+                        "primary-light": "#B5C0AD",
+                        "primary-bg": "#FDF8F5",
+                        "card-bg": "#FFFFFF",
+                        "accent-rose": "#D9B8B1",
+                        "accent-gold": "#E2C799",
+                        "text-main": "#4A4947",
+                        "text-muted": "#9A9591",
+                        "border-light": "#F2EBE6"
+                    },
+                    fontFamily: {
+                        "sans": ["Manrope", "sans-serif"],
+                        "display": ["Public Sans", "sans-serif"],
+                        "arabic": ["Amiri", "serif"]
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 40px -10px rgba(150, 163, 136, 0.15)',
+                        'rose': '0 10px 40px -10px rgba(217, 184, 177, 0.2)',
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        :root {
+            --primary-color: #96A388;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .fill-active {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Public Sans', sans-serif;
+            background-color: #FDF8F5;
+            color: #4A4947;
+            -webkit-tap-highlight-color: transparent;
+            user-select: none;
+            overflow-x: hidden;
+        }
+        /* Custom Switch */
+        .switch {
+          position: relative;
+          display: inline-block;
+          width: 44px;
+          height: 24px;
+        }
+        .switch input {
+          opacity: 0;
+          width: 0;
+          height: 0;
+        }
+        .slider {
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: #E9E4E0;
+          transition: .4s;
+          border-radius: 24px;
+        }
+        .slider:before {
+          position: absolute;
+          content: "";
+          height: 18px;
+          width: 18px;
+          left: 3px;
+          bottom: 3px;
+          background-color: white;
+          transition: .4s;
+          border-radius: 50%;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        input:checked + .slider {
+          background-color: #96A388;
+        }
+        input:checked + .slider:before {
+          transform: translateX(20px);
+        }
+
+        /* IOS Style Slider Range */
+        input[type=range].ios-slider {
+          -webkit-appearance: none;
+          width: 100%;
+          background: transparent;
+        }
+        input[type=range].ios-slider::-webkit-slider-runnable-track {
+          width: 100%;
+          height: 6px;
+          cursor: pointer;
+          background: #EBE4E0;
+          border-radius: 10px;
+        }
+        input[type=range].ios-slider::-webkit-slider-thumb {
+          height: 24px;
+          width: 24px;
+          border-radius: 50%;
+          background: #96A388;
+          cursor: pointer;
+          -webkit-appearance: none;
+          margin-top: -9px;
+          border: 4px solid white;
+          box-shadow: 0 4px 10px rgba(150, 163, 136, 0.2);
+        }
+
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .pulse-dot {
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background: #D9B8B1;
+          box-shadow: 0 0 0 rgba(217, 184, 177, 0.4);
+          animation: pulse 2.5s infinite;
+        }
+        @keyframes pulse {
+          0% { box-shadow: 0 0 0 0 rgba(217, 184, 177, 0.5); }
+          70% { box-shadow: 0 0 0 15px rgba(217, 184, 177, 0); }
+          100% { box-shadow: 0 0 0 0 rgba(217, 184, 177, 0); }
+        }
+
+        .arabic-text {
+            font-family: 'Amiri', serif;
+            direction: rtl;
+        }
+
+        .safe-area-bottom {
+            padding-bottom: env(safe-area-inset-bottom);
+        }
+
+        /* Glass effect */
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+</html>
